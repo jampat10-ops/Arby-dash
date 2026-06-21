@@ -1,6 +1,12 @@
 extends CharacterBody2D
 
+func _ready():
+	add_to_group("player")
 
+func die():
+	get_tree().reload_current_scene()
+
+# ... rest of your existing code below
 const SPEED = 150.0
 const JUMP_VELOCITY = -300
 
