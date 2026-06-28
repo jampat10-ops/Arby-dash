@@ -21,5 +21,5 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 	
 	# Kill player on touch
-	if is_instance_valid(target) and position.distance_to(target.position) < 50:
+	if is_instance_valid(target) and position.distance_to(target.position) < 70:
 		target.queue_free()
