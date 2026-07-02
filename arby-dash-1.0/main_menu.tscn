@@ -1,0 +1,103 @@
+[gd_scene load_steps=5 format=3 uid="uid://dlkedsyokbexg"]
+
+[ext_resource type="Script" uid="uid://cn7ap5qpogsuy" path="res://main_menu.gd" id="1_06t4h"]
+[ext_resource type="Texture2D" uid="uid://btjbk3bewu8tq" path="res://cooltext511053039758713.png" id="2_7vrkn"]
+
+[sub_resource type="FontVariation" id="FontVariation_fu7sn"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jix8l"]
+bg_color = Color(0.184481, 0.137601, 0.0931812, 1)
+draw_center = false
+
+[node name="main menu" type="Node2D"]
+script = ExtResource("1_06t4h")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = 6.0
+offset_top = -2.0
+offset_right = 1151.0
+offset_bottom = 648.0
+color = Color(0.694727, 0.134005, 0.191207, 1)
+
+[node name="button manager" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="easy" type="Button" parent="button manager"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.838
+anchor_bottom = 0.753
+offset_left = 365.0
+offset_top = 260.0
+offset_right = 727.48
+offset_bottom = 312.88
+text = "easy"
+
+[node name="medium" type="Button" parent="button manager"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.838
+anchor_bottom = 0.753
+offset_left = 365.0
+offset_top = 352.0
+offset_right = 727.48
+offset_bottom = 404.88
+text = "medium"
+
+[node name="hard" type="Button" parent="button manager"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.838
+anchor_bottom = 0.753
+offset_left = 363.0
+offset_top = 446.0
+offset_right = 725.48
+offset_bottom = 498.88
+text = "hard"
+
+[node name="quit" type="Button" parent="button manager"]
+layout_mode = 0
+offset_left = 360.0
+offset_top = 541.0
+offset_right = 759.0
+offset_bottom = 628.0
+text = "quit"
+
+[node name="Cooltext511053039758713" type="Sprite2D" parent="."]
+position = Vector2(562, 181)
+scale = Vector2(1.72346, 2.21875)
+texture = ExtResource("2_7vrkn")
+
+[node name="TextEdit" type="TextEdit" parent="."]
+visible = false
+offset_left = 332.0
+offset_top = 249.0
+offset_right = 781.0
+offset_bottom = 447.0
+theme_override_colors/word_highlighted_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = SubResource("FontVariation_fu7sn")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_jix8l")
+text = "escape meat mountian"
+context_menu_enabled = false
+emoji_menu_enabled = false
+shortcut_keys_enabled = false
+selecting_enabled = false
+deselect_on_focus_loss_enabled = false
+drag_and_drop_selection_enabled = false
+virtual_keyboard_enabled = false
+middle_mouse_paste_enabled = false
+empty_selection_clipboard_enabled = false
+use_default_word_separators = false
+
+[connection signal="pressed" from="button manager/easy" to="." method="_on_medium_pressed"]
+[connection signal="pressed" from="button manager/easy" to="." method="_on_easy_pressed"]
+[connection signal="pressed" from="button manager/easy" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="button manager/medium" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="button manager/hard" to="." method="_on_hard_pressed"]
+[connection signal="pressed" from="button manager/hard" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="button manager/quit" to="." method="_on_quit_pressed"]
