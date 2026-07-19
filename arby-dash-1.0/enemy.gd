@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 @onready var target = $"../player"
-var speed = 129
+var speed = 120
 
 func _physics_process(delta: float) -> void:
 	var direction = (target.position - position).normalized()

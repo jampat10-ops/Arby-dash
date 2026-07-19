@@ -57,3 +57,5 @@ shape = SubResource("CircleShape2D_6ct3r")
 position = Vector2(-11, -15)
 scale = Vector2(0.0732899, 0.0673759)
 zoom = Vector2(3, 3)
+position_smoothing_enabled = true
+position_smoothing_speed = 4.755
