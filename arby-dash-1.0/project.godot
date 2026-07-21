@@ -10,7 +10,7 @@ config_version=5
 
 [application]
 
-config/name="Arby dash 1.0"
+config/name="meat mountian dash 1.0"
 run/main_scene="uid://c4hgj3y3b2xho"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
