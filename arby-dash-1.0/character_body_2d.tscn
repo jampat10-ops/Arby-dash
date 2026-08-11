@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://crpdpwffqdyjd"]
+[gd_scene load_steps=11 format=3 uid="uid://crpdpwffqdyjd"]
 
 [ext_resource type="Script" uid="uid://phyb8q7jwayk" path="res://character_body_2d.gd" id="1_44cfe"]
 [ext_resource type="Texture2D" uid="uid://btklhfixbtehy" path="res://png/Idle (1).png" id="1_ghijl"]
@@ -37,6 +37,8 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_6ct3r"]
 radius = 8.24621
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_44cfe"]
+
 [node name="CharacterBody2D" type="CharacterBody2D"]
 script = ExtResource("1_44cfe")
 
@@ -46,8 +48,6 @@ scale = Vector2(0.0732899, 0.0673759)
 sprite_frames = SubResource("SpriteFrames_186t8")
 autoplay = "default"
 frame_progress = 0.858191
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
 position = Vector2(-13, -8)
@@ -59,3 +59,9 @@ scale = Vector2(0.0732899, 0.0673759)
 zoom = Vector2(3, 3)
 position_smoothing_enabled = true
 position_smoothing_speed = 4.755
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-11, -8)
+shape = SubResource("CircleShape2D_44cfe")
