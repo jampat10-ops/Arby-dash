@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://c4hgj3y3b2xho"]
+[gd_scene load_steps=7 format=3 uid="uid://c4hgj3y3b2xho"]
 
 [ext_resource type="Script" uid="uid://cn7ap5qpogsuy" path="res://main_menu.gd" id="1_06t4h"]
 [ext_resource type="Texture2D" uid="uid://c5od2f8odr8t6" path="res://cooltext512453012646982.png" id="2_7vrkn"]
@@ -8,6 +8,10 @@
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jix8l"]
 bg_color = Color(0.184481, 0.137601, 0.0931812, 1)
 draw_center = false
+
+[sub_resource type="FontVariation" id="FontVariation_7vrkn"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fu7sn"]
 
 [node name="main menu" type="Node2D"]
 script = ExtResource("1_06t4h")
@@ -70,6 +74,23 @@ use_default_word_separators = false
 [node name="Cooltext512453012646982" type="Sprite2D" parent="."]
 position = Vector2(589, 192)
 texture = ExtResource("2_7vrkn")
+
+[node name="run from a meat burger in a mountian" type="TextEdit" parent="."]
+offset_left = 161.0
+offset_top = 210.0
+offset_right = 641.0
+offset_bottom = 246.0
+scale = Vector2(3, 3)
+size_flags_stretch_ratio = 0.0
+theme_override_colors/current_line_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_selected_color = Color(0, 0, 0, 1)
+theme_override_colors/caret_background_color = Color(0, 0, 0, 1)
+theme_override_colors/caret_color = Color(0, 0, 0, 1)
+theme_override_colors/search_result_border_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = SubResource("FontVariation_7vrkn")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_fu7sn")
+text = "run from a meat burger on a burger "
 
 [connection signal="pressed" from="button manager/start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="button manager/quit" to="." method="_on_quit_pressed"]
