@@ -70,7 +70,7 @@ the big burger map but NO CHECKPOINTS.
 get to the end and you are the king."
 
 [connection signal="pressed" from="easy Button" to="." method="_on_easy_button_pressed"]
-[connection signal="pressed" from="medium Button" to="." method="_on_medium_button_pressed"]
 [connection signal="pressed" from="medium Button" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="medium Button" to="." method="_on_medium_button_pressed"]
 [connection signal="pressed" from="hard Button" to="." method="_on_button_3_pressed"]
 [connection signal="pressed" from="hard Button" to="." method="_on_hard_button_pressed"]
